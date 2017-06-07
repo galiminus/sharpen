@@ -11,7 +11,7 @@ scp .env app@sharpen:sharpen/.
 
 ssh root@sharpen << EOF
   cd /home/app/sharpen
-  nf export -t systemd -o /lib/systemd/system/ app=8
+  nf export -t systemd -o /lib/systemd/system/ web=8
   systemctl daemon-reload
   systemctl enable foreman.target
   systemctl restart foreman.target
